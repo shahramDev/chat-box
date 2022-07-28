@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    background-color: aquamarine;
+}
+.container {
+    width: 350px;
+    height: 600px;
+    border: 1px solid red;
+    border-radius: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: linear-gradient( rgba(0,0,0,0.2) , rgba(0,0,0,0.2)) , url(../img/img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+.box {
+    width: 100%;
+}
+.box-right {
+    direction: rtl;
+}
+.chat-item-left {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(116, 250, 145);
+    margin: 10px;
+    position: relative;
+}
+.chat-item-right {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(116, 250, 145);
+    margin: 10px;
+    position: relative;
+}
+.chat-item-left::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(116, 250, 145);
+    bottom: -3px;
+    left: -0.5px;
+    transform: rotateZ(120deg) skewX(50deg);
+}
+.chat-item-right::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(116, 250, 145);
+    bottom: -3px;
+    right: -0.1px;
+    transform: rotateZ(-120deg) skewX(-50deg);
+}
+.chat-item-left p {
+    color: white;
+    padding: 5px;
+}
+.chat-item-right p {
+    direction: ltr;
+    color: white;
+    padding: 5px;
+}
